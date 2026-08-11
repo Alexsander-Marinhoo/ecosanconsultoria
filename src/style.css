@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Lenis Smooth Scroll CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@layer utilities {
+  .bg-navy-950 {
+    background-color: #050b14;
+  }
+  .bg-navy-900 {
+    background-color: #0a182e;
+  }
+  .bg-navy-850 {
+    background-color: #0f2242;
+  }
+  .bg-navy-800 {
+    background-color: #152b52;
+  }
+  
+  .text-gold-400 {
+    color: #e5b95c;
+  }
+  .text-gold-500 {
+    color: #c5a059;
+  }
+  .text-gold-600 {
+    color: #a37d36;
+  }
+
+  .border-gold-500\/30 {
+    border-color: rgba(197, 160, 89, 0.3);
+  }
+  .border-gold-500\/50 {
+    border-color: rgba(197, 160, 89, 0.5);
+  }
+
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #f5d77f 0%, #c5a059 50%, #9e7a33 100%);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #fce8a6 0%, #d4af37 50%, #b8860b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-navy {
+    background-color: #0a182e;
+    background: rgba(10, 24, 46, 0.95);
+    border: 1px solid rgba(197, 160, 89, 0.18);
+  }
+
+  .glass-card-hover {
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .glass-card-hover:hover {
+    background: rgba(15, 34, 66, 0.95);
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 35px -10px rgba(5, 11, 20, 0.8), 0 0 25px rgba(212, 175, 55, 0.15);
+  }
+
+  .card-executive {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card-executive:hover {
+    border-color: #c5a059;
+    box-shadow: 0 15px 30px -10px rgba(10, 24, 46, 0.08), 0 0 15px rgba(197, 160, 89, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Hide scrollbar utility */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050b14;
+}
+::-webkit-scrollbar-thumb {
+  background: #152b52;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
