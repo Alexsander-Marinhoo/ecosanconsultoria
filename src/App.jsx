@@ -47,15 +47,15 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950 overflow-x-hidden">
       <Header />
-      <main>
-        <Hero />
-        {/* <Approach /> */}
-        {/* <About /> */}
-        {/* <Services /> */}
-        {/* <Differentials /> */}
-        {/* <CTASection /> */}
+      <main className="pt-24 lg:pt-28">
+        {/* <Hero /> */}
+        <Approach />
+        <About />
+        <Services />
+        <Differentials />
+        <CTASection />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
