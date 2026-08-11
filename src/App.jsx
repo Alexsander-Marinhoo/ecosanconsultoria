@@ -47,15 +47,17 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950 overflow-x-hidden">
       <Header />
-      <main>
-        <Hero />
-        <Approach />
-        <About />
-        <Services />
-        <Differentials />
-        <CTASection />
+      <main className="pt-32 text-center p-8">
+        <h1 className="text-2xl font-bold text-amber-400">[TESTE SAFARI STEP 1: Apenas o Header (Nav) Ativo]</h1>
+        <p className="text-slate-400 mt-2">Teste a navegação do Header no Safari. Se carregar rápido, ativaremos o próximo componente (Hero).</p>
+        {/* <Hero /> */}
+        {/* <Approach /> */}
+        {/* <About /> */}
+        {/* <Services /> */}
+        {/* <Differentials /> */}
+        {/* <CTASection /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
