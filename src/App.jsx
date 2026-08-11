@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Approach from './components/Approach';
 import About from './components/About';
+import ProfileSection from './components/ProfileSection';
 import Services from './components/Services';
 import Differentials from './components/Differentials';
 import CTASection from './components/CTASection';
@@ -51,6 +52,7 @@ export default function App() {
         <Hero />
         <Approach />
         <About />
+        <ProfileSection />
         <Services />
         <Differentials />
         <CTASection />
