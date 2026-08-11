@@ -19,13 +19,26 @@ export default function Hero() {
         />
       </picture>
       
-      {/* Rich Executive Dark Gradient Overlay (Responsive B2B contrast for 100% legibility in Safari) */}
-      <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-navy-950 via-navy-950/95 via-70% to-navy-950/40 pointer-events-none z-0"></div>
+      {/* Dark Navy Overlay Gradient for Mobile (< 1024px) */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-10 lg:hidden"
+        style={{
+          background: 'linear-gradient(180deg, rgba(5, 11, 20, 0.96) 0%, rgba(5, 11, 20, 0.92) 60%, rgba(5, 11, 20, 0.75) 100%)'
+        }}
+      ></div>
+
+      {/* Dark Navy Overlay Gradient for Desktop (>= 1024px) */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-10 hidden lg:block"
+        style={{
+          background: 'linear-gradient(90deg, #050b14 0%, #050b14 45%, rgba(5, 11, 20, 0.92) 65%, rgba(5, 11, 20, 0.4) 85%, rgba(5, 11, 20, 0.1) 100%)'
+        }}
+      ></div>
 
       {/* Gold Ambient Glow Orb (Lightweight blur-3xl matching Gisela project) */}
-      <div className="absolute top-10 left-10 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+      <div className="absolute top-10 left-10 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none z-10"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Main Content Column */}

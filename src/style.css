@@ -2,6 +2,13 @@
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-navy-950: #050b14;
+  --color-navy-900: #0a182e;
+  --color-navy-850: #0f2242;
+  --color-navy-800: #152b52;
+  --color-gold-400: #e5b95c;
+  --color-gold-500: #c5a059;
+  --color-gold-600: #a37d36;
 }
 
 /* Lenis Smooth Scroll CSS */
