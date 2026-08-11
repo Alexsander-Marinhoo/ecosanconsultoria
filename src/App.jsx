@@ -48,7 +48,7 @@ export default function App() {
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950 overflow-x-hidden">
       <Header />
       <main className="pt-24 lg:pt-28">
-        {/* <Hero /> */}
+        <Hero />
         <Approach />
         <About />
         <Services />
