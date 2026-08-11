@@ -61,6 +61,7 @@ html.lenis, html.lenis body {
   }
 
   .text-gold-gradient {
+    color: #e5b95c;
     background: linear-gradient(135deg, #fce8a6 0%, #d4af37 50%, #b8860b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
