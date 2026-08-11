@@ -52,9 +52,9 @@ export default function App() {
         <Hero />
         <Approach />
         <About />
-        <ProfileSection />
         <Services />
         <Differentials />
+        <ProfileSection />
         <CTASection />
       </main>
       <Footer />

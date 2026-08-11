@@ -2,8 +2,17 @@ import React from 'react';
 import Logo from './Logo';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
+function LinkedInIcon({ className = "w-4 h-4" }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.49 1.49 0 1 0 0 2.98 1.49 1.49 0 0 0 0-2.98Z"/>
+    </svg>
+  );
+}
+
 export default function Footer() {
   const whatsappUrl = "https://wa.me/5521964199750?text=Ol%C3%A1%2C%20gostaria%20de%20entrar%20em%20contato%20com%20a%20Ecosan.";
+  const linkedinUrl = "https://www.linkedin.com/in/ssandroalvess/";
   const developerIgUrl = "https://www.instagram.com/alexsander.code/";
 
   const handleNavClick = (e, targetId) => {
@@ -89,6 +98,18 @@ export default function Footer() {
                 >
                   <Mail className="w-4 h-4 text-amber-400 shrink-0" />
                   <span><strong>E-mail:</strong> ecosaneng.consultoriadeqsms@gmail.com</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 text-slate-300 hover:text-amber-400 transition-colors"
+                >
+                  <LinkedInIcon className="w-4 h-4 text-amber-400 shrink-0" />
+                  <span><strong>LinkedIn:</strong> Sandro Alves</span>
                 </a>
               </li>
 
