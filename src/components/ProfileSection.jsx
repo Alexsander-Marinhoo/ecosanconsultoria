@@ -24,14 +24,14 @@ function LinkedInIcon({ className = "w-4 h-4" }) {
 export default function ProfileSection() {
   /* 
    * FOTO DE PERFIL DO CLIENTE:
-   * Foto oficial definida em public/sandroalves.jpg
+   * Foto oficial tratada e upscaled em public/san-alves-portrait.jpg
    */
-  const [imgSrc, setImgSrc] = useState('/sandroalves.jpg');
+  const [imgSrc, setImgSrc] = useState('/san-alves-portrait.jpg');
   const [hasError, setHasError] = useState(false);
 
   const handleImageError = () => {
-    if (imgSrc === '/sandroalves.jpg') {
-      setImgSrc('/profile.jpg');
+    if (imgSrc === '/san-alves-portrait.jpg') {
+      setImgSrc('/sandroalves.jpg');
     } else {
       setHasError(true);
     }
