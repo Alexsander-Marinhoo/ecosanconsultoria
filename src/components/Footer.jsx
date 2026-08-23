@@ -112,7 +112,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-2.5 text-slate-300 hover:text-amber-400 transition-colors"
                 >
                   <LinkedInIcon className="w-4 h-4 text-amber-400 shrink-0" />
-                  <span><strong>LinkedIn:</strong> Sandro Alves</span>
+                  <span><strong>LinkedIn:</strong> San Alves</span>
                 </a>
               </li>
 

@@ -137,7 +137,7 @@ export default function ProfileSection() {
                       Responsável Técnico & Diretor QSMS
                     </span>
                     <h3 className="text-xl font-extrabold text-white">
-                      Sandro Alves
+                      San Alves
                     </h3>
                   </div>
                 </div>
