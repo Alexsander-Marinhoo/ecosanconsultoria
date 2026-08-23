@@ -8,6 +8,7 @@ import Approach from './components/Approach';
 import About from './components/About';
 import ProfileSection from './components/ProfileSection';
 import Services from './components/Services';
+import SesmtSection from './components/SesmtSection';
 import Differentials from './components/Differentials';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
@@ -53,6 +54,7 @@ export default function App() {
         <Approach />
         <About />
         <Services />
+        <SesmtSection />
         <Differentials />
         <ProfileSection />
         <CTASection />

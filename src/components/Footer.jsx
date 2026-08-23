@@ -58,6 +58,9 @@ export default function Footer() {
                 <a href="#sobre" onClick={(e) => handleNavClick(e, '#sobre')} className="hover:text-amber-400 transition-colors">Sobre a Consultoria</a>
               </li>
               <li>
+                <a href="#sesmt" onClick={(e) => handleNavClick(e, '#sesmt')} className="hover:text-amber-400 transition-colors">Terceirização de SESMT & Mão de Obra</a>
+              </li>
+              <li>
                 <a href="#servicos" onClick={(e) => handleNavClick(e, '#servicos')} className="hover:text-amber-400 transition-colors">Segurança do Trabalho & PGR</a>
               </li>
               <li>

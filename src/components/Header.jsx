@@ -96,10 +96,11 @@ export default function Header() {
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold text-slate-100">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-semibold text-slate-100">
             <a href="#inicio" onClick={(e) => handleNavClick(e, '#inicio')} className="hover:text-amber-400 transition-colors">Início</a>
             <a href="#sobre" onClick={(e) => handleNavClick(e, '#sobre')} className="hover:text-amber-400 transition-colors">Sobre a Consultoria</a>
             <a href="#servicos" onClick={(e) => handleNavClick(e, '#servicos')} className="hover:text-amber-400 transition-colors">Áreas de Atuação</a>
+            <a href="#sesmt" onClick={(e) => handleNavClick(e, '#sesmt')} className="hover:text-amber-400 transition-colors">Terceirização SESMT</a>
             <a href="#diferenciais" onClick={(e) => handleNavClick(e, '#diferenciais')} className="hover:text-amber-400 transition-colors">Diferenciais</a>
             <a href="#especialista" onClick={(e) => handleNavClick(e, '#especialista')} className="hover:text-amber-400 transition-colors">Responsável Técnico</a>
             <a href="#contato" onClick={(e) => handleNavClick(e, '#contato')} className="hover:text-amber-400 transition-colors">Contato</a>
@@ -138,6 +139,7 @@ export default function Header() {
             <a href="#inicio" onClick={(e) => handleNavClick(e, '#inicio')} className="text-slate-100 hover:text-amber-400 py-1 font-semibold">Início</a>
             <a href="#sobre" onClick={(e) => handleNavClick(e, '#sobre')} className="text-slate-100 hover:text-amber-400 py-1 font-semibold">Sobre a Consultoria</a>
             <a href="#servicos" onClick={(e) => handleNavClick(e, '#servicos')} className="text-slate-100 hover:text-amber-400 py-1 font-semibold">Áreas de Atuação (Serviços)</a>
+            <a href="#sesmt" onClick={(e) => handleNavClick(e, '#sesmt')} className="text-slate-100 hover:text-amber-400 py-1 font-semibold">Terceirização de SESMT & Mão de Obra</a>
             <a href="#diferenciais" onClick={(e) => handleNavClick(e, '#diferenciais')} className="text-slate-100 hover:text-amber-400 py-1 font-semibold">Diferenciais</a>
             <a href="#especialista" onClick={(e) => handleNavClick(e, '#especialista')} className="text-slate-100 hover:text-amber-400 py-1 font-semibold">Responsável Técnico (Trajetória)</a>
             <a href="#contato" onClick={(e) => handleNavClick(e, '#contato')} className="text-slate-100 hover:text-amber-400 py-1 font-semibold">Contato Direto</a>
