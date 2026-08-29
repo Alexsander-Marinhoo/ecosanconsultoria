@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageSquare, PhoneCall, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { PhoneCall, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function CTASection() {
   const whatsappUrl = "https://wa.me/5521964199750?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20técnica%20de%20diagn%C3%B3stico%20em%20QSMS.";
@@ -12,11 +13,10 @@ export default function CTASection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="glass-navy p-10 sm:p-14 rounded-3xl border border-amber-500/40 shadow-2xl text-center relative overflow-hidden">
           
-          {/* Subtle Top Gold Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">
-            <ShieldCheck className="w-4 h-4" />
-            <span>Diagnóstico Técnico Especializado</span>
-          </div>
+          {/* Clean Top Label */}
+          <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400 block mb-4">
+            ✳ Diagnóstico Técnico Especializado
+          </span>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6 max-w-3xl mx-auto leading-tight">
             Pronto para garantir <span className="text-gold-gradient">100% de conformidade em QSMS</span> e reduzir riscos?
@@ -32,9 +32,9 @@ export default function CTASection() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gold-gradient text-navy-950 font-extrabold text-sm uppercase tracking-wider shadow-xl hover:brightness-110 hover:shadow-amber-500/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-navy-950 text-white font-extrabold text-sm uppercase tracking-wider shadow-xl border border-amber-500/30 hover:bg-emerald-600 hover:border-emerald-500 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
             >
-              <MessageSquare className="w-5 h-5 fill-navy-950" />
+              <WhatsAppIcon className="w-5 h-5 text-white fill-white shrink-0" />
               <span>Solicitar Diagnóstico via WhatsApp</span>
             </a>
 

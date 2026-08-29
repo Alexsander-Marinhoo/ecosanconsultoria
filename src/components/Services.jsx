@@ -1,6 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { HardHat, Leaf, SlidersHorizontal, Scale, CheckCircle2, MessageSquare, Search, ChevronLeft, ChevronRight, MoveRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { 
+  HardHat, 
+  Leaf, 
+  SlidersHorizontal, 
+  Scale, 
+  CheckCircle2, 
+  Search, 
+  ChevronLeft, 
+  ChevronRight, 
+  MoveRight, 
+  ChevronDown, 
+  ChevronUp 
+} from 'lucide-react';
 import FadeUp from './FadeUp';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -62,7 +75,6 @@ export default function Services() {
       title: 'PGR — Programa de Gerenciamento de Riscos',
       description: 'Elaboração completa do inventário de riscos ocupacionais e plano de ação conforme a nova NR-01.',
       details: ['Inventário de Riscos', 'Plano de Ação Contínuo', 'Matriz de Risco Ocupacional'],
-      icon: HardHat,
     },
     {
       id: 'pcmso',
@@ -71,7 +83,6 @@ export default function Services() {
       title: 'PCMSO — Controle Médico de Saúde Ocupacional',
       description: 'Planejamento e coordenação de exames admissionais, periódicos e demissionais conforme NR-07.',
       details: ['Cronograma de Exames', 'Atestado de Saúde (ASO)', 'Relatório Analítico Anual'],
-      icon: HardHat,
     },
     {
       id: 'ltcat',
@@ -80,7 +91,6 @@ export default function Services() {
       title: 'LTCAT — Laudo Técnico Ambientais',
       description: 'Laudo conclusivo para comprovação de aposentadoria especial perante o INSS / eSocial.',
       details: ['Avaliação de Agentes Nocivos', 'Enquadramento Previdenciário', 'Adequação eSocial'],
-      icon: HardHat,
     },
     {
       id: 'avaliacoes-ambientais',
@@ -89,7 +99,6 @@ export default function Services() {
       title: 'Avaliações Ambientais Quantitativas',
       description: 'Medição precisa de ruído ocupacional, dosimetrias, estresse térmico (calor), vapores e químicos.',
       details: ['Dosimetria de Ruído', 'IBUTG (Calor)', 'Amostragem Química NHO/NIOSH'],
-      icon: HardHat,
     },
     {
       id: 'aet-pca-ppr',
@@ -98,7 +107,6 @@ export default function Services() {
       title: 'AET, PCA e PPR',
       description: 'Análise Ergonômica do Trabalho (NR-17), Programa de Conservação Auditiva e Proteção Respiratória.',
       details: ['Adequação Postural NR-17', 'Conservação Auditiva', 'Seleção de EPIs Respiratórios'],
-      icon: HardHat,
     },
     {
       id: 'apr-hazop',
@@ -107,7 +115,6 @@ export default function Services() {
       title: 'APR & HAZOP — Gerenciamento de Riscos',
       description: 'Análise Prévia de Risco e metodologia HAZOP para processos industriais de alto risco.',
       details: ['Mapeamento Processual', 'Prevenção de Sinistros', 'Permissão de Trabalho (PT)'],
-      icon: HardHat,
     },
 
     // Meio Ambiente
@@ -118,7 +125,6 @@ export default function Services() {
       title: 'Gerenciamento de Resíduos Sólidos (PGRS)',
       description: 'Elaboração e implementação do Plano de Gerenciamento de Resíduos Industriais e Comerciais.',
       details: ['Classificação NBR 10004', 'Manifesto MTR', 'Destinação Final Licenciada'],
-      icon: Leaf,
     },
     {
       id: 'licenciamento',
@@ -127,7 +133,6 @@ export default function Services() {
       title: 'Licenciamento Ambiental & Outorgas',
       description: 'Acompanhamento completo de Licença Prévia (LP), de Instalação (LI) e Operação (LO) junto aos órgãos ambientais.',
       details: ['Licença Prévia e Operação', 'Outorga de Água', 'Condicionantes Ambientais'],
-      icon: Leaf,
     },
     {
       id: 'estudos-impacto',
@@ -136,7 +141,6 @@ export default function Services() {
       title: 'Estudos de Impacto & Monitoramento',
       description: 'Avaliação de impactos ambientais, programas de monitoramento de efluentes e adequação legal.',
       details: ['Relatórios de Impacto', 'Monitoramento de Efluentes', 'Conformidade CONAMA'],
-      icon: Leaf,
     },
 
     // Auditorias SGI (ISO)
@@ -147,7 +151,6 @@ export default function Services() {
       title: 'ISO 9001 — Gestão da Qualidade',
       description: 'Consultoria para implementação, mapeamento de processos e auditoria interna na norma ISO 9001.',
       details: ['Padronização de Processos', 'Auditoria Interna', 'Certificação ISO 9001'],
-      icon: SlidersHorizontal,
     },
     {
       id: 'iso-14001',
@@ -156,7 +159,6 @@ export default function Services() {
       title: 'ISO 14001 — Gestão Ambiental',
       description: 'Estruturação do Sistema de Gestão Ambiental para mitigação de impactos e melhoria contínua.',
       details: ['Levantamento de Aspectos', 'Requisitos Legais Ambientais', 'Auditoria ISO 14001'],
-      icon: SlidersHorizontal,
     },
     {
       id: 'iso-45001',
@@ -165,7 +167,6 @@ export default function Services() {
       title: 'ISO 45001 — Saúde e Segurança Ocupacional',
       description: 'Implementação da norma internacional de saúde e segurança no trabalho com foco em prevenção.',
       details: ['Cultura de Segurança', 'Engajamento de Equipes', 'Auditoria ISO 45001'],
-      icon: SlidersHorizontal,
     },
 
     // Gestão Tributária SST
@@ -176,7 +177,6 @@ export default function Services() {
       title: 'Gestão & Contestação de FAP e RAT',
       description: 'Auditoria técnica das alíquotas do FAP/RAT para identificação de cobranças indevidas e contestação.',
       details: ['Auditoria de Alíquotas', 'Contestação FAP', 'Nexo Técnico Epidemiológico (NTEP)'],
-      icon: Scale,
     },
     {
       id: 'reducao-passivos',
@@ -185,7 +185,6 @@ export default function Services() {
       title: 'Redução de Custos & Assistência Pericial',
       description: 'Acompanhamento em perícias trabalhistas de insalubridade/periculosidade e elisão fiscal de tributos SST.',
       details: ['Assistência Pericial Judicial', 'Quesitamento Técnico', 'Prevenção de Passivos'],
-      icon: Scale,
     },
   ];
 
@@ -212,16 +211,20 @@ export default function Services() {
         
         {/* Section Header */}
         <FadeUp delay={0.1}>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-amber-500 mb-2 block">
-              ✳ Áreas de Atuação & Serviços
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-              Soluções Especializadas em <span className="text-amber-500">QSMS</span> para sua Empresa
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              Navegue pelas nossas áreas de expertise técnica e selecione o serviço necessário para garantir conformidade e segurança jurídica.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+            <div className="lg:col-span-7">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-amber-500 mb-3 block">
+                ✳ Áreas de Atuação & Serviços
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Soluções Especializadas em <span className="text-amber-500">QSMS</span> para sua Empresa
+              </h2>
+            </div>
+            <div className="lg:col-span-5">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                Navegue pelas nossas áreas de expertise técnica e selecione o serviço necessário para garantir conformidade e segurança jurídica.
+              </p>
+            </div>
           </div>
         </FadeUp>
 
@@ -300,30 +303,23 @@ export default function Services() {
           {/* Services Cards Grid */}
           <FadeUp delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {displayedServices.map((service) => {
-              const ServiceIcon = service.icon;
-              return (
-                <div
-                  key={service.id}
-                  className="card-executive p-6 rounded-2xl flex flex-col justify-between group hover:border-amber-500/60 h-full"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 font-extrabold text-[10px] uppercase border border-amber-500/30">
-                        {service.categoryName}
-                      </span>
-                      <div className="w-9 h-9 rounded-xl bg-navy-950 text-amber-400 border border-amber-500/30 flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
-                        <ServiceIcon className="w-5 h-5" />
-                      </div>
-                    </div>
+            {displayedServices.map((service) => (
+              <div
+                key={service.id}
+                className="card-executive p-6 rounded-2xl flex flex-col justify-between h-full"
+              >
+                <div>
+                  <span className="text-[11px] font-extrabold text-amber-600 uppercase tracking-wider block mb-3">
+                    {service.categoryName}
+                  </span>
 
-                    <h3 className="text-base font-extrabold text-slate-900 mb-2 group-hover:text-amber-500 transition-colors">
-                      {service.title}
-                    </h3>
+                  <h3 className="text-base font-extrabold text-slate-900 mb-2">
+                    {service.title}
+                  </h3>
 
-                    <p className="text-xs text-slate-600 mb-4 leading-relaxed font-normal">
-                      {service.description}
-                    </p>
+                  <p className="text-xs text-slate-600 mb-4 leading-relaxed font-normal">
+                    {service.description}
+                  </p>
 
                     {/* Details Bullet List */}
                     <div className="space-y-1.5 mb-6 pt-3 border-t border-slate-100">
@@ -336,19 +332,18 @@ export default function Services() {
                     </div>
                   </div>
 
-                  {/* Request Button */}
-                  <a
-                    href={getWhatsappServiceUrl(service.title)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3 px-4 rounded-xl bg-gold-gradient text-navy-950 font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md hover:brightness-110 transform hover:-translate-y-0.5"
-                  >
-                    <MessageSquare className="w-3.5 h-3.5 fill-navy-950 text-navy-950" />
-                    <span>Solicitar Orçamento</span>
-                  </a>
-                </div>
-              );
-            })}
+                {/* Request Button */}
+                <a
+                  href={getWhatsappServiceUrl(service.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 rounded-xl bg-navy-950 text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 transition-all shadow-md border border-amber-500/20 hover:bg-emerald-600 hover:border-emerald-500 hover:shadow-emerald-900/30 transform hover:-translate-y-0.5"
+                >
+                  <WhatsAppIcon className="w-4 h-4 text-white fill-white shrink-0" />
+                  <span>Solicitar Orçamento</span>
+                </a>
+              </div>
+            ))}
           </div>
         </FadeUp>
 

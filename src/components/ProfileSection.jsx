@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   ShieldCheck, 
   Award, 
-  BarChart3, 
   CheckCircle2, 
   Briefcase, 
   Cpu, 
@@ -78,68 +77,77 @@ export default function ProfileSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <FadeUp delay={0} yOffset={16} className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Liderança Técnica & Experiência</span>
+        <FadeUp delay={0} yOffset={16}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
+            <div className="lg:col-span-7">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-3 block">
+                ✳ Responsável Técnico & Liderança
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Quem Está à Frente das <span className="text-gold-gradient">Nossas Soluções</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-5">
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                Mais de 17 anos de excelência técnica em QSMS, Higiene Ocupacional e Engenharia de Segurança em grandes indústrias do Brasil.
+              </p>
+            </div>
           </div>
-
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Quem Está à Frente das <span className="text-gold-gradient">Nossas Soluções</span>
-          </h2>
-
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-            Mais de 17 anos de excelência técnica em QSMS, Higiene Ocupacional e Engenharia de Segurança em grandes indústrias do Brasil.
-          </p>
         </FadeUp>
 
         {/* Main Content Grid: Left Photo Card / Right Bio Details */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
-          {/* LEFT COLUMN: Profile Photo & Quick Stats */}
+          {/* LEFT COLUMN: Profile Photo Avatar & Quick Stats */}
           <div className="lg:col-span-5 flex flex-col items-center lg:sticky lg:top-28">
             <FadeUp delay={0.1} yOffset={20} className="w-full max-w-md">
               
-              {/* Photo Frame Container with Modern Glow Border */}
-              <div className="relative group p-2 rounded-3xl bg-slate-900 border border-amber-500/30 shadow-2xl shadow-amber-500/5">
+              {/* Executive Profile Card */}
+              <div className="relative group p-6 sm:p-8 rounded-3xl glass-navy border border-amber-500/30 shadow-2xl flex flex-col items-center text-center">
                 
-                {/* Years Badge Floating Top-Right */}
-                <div className="absolute top-4 right-4 z-20 bg-gold-gradient text-slate-950 font-black text-xs px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
-                  <Award className="w-4 h-4" />
+                {/* Years Experience Badge */}
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-gradient text-slate-950 font-black text-xs shadow-md mb-2">
+                  <Award className="w-3.5 h-3.5" />
                   <span>+17 Anos de Experiência</span>
                 </div>
 
-                {/* Profile Image Element */}
-                <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-slate-800 flex items-center justify-center">
-                  {!hasError ? (
-                    <img 
-                      src={imgSrc} 
-                      alt="Foto de Perfil do Responsável Técnico QSMS"
-                      onError={handleImageError}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-slate-900 text-slate-400">
-                      <Camera className="w-16 h-16 text-amber-400/60 mb-3" />
-                      <span className="text-sm font-semibold text-slate-200">Foto de Perfil</span>
-                      <span className="text-xs text-slate-400 mt-1">
-                        Insira a foto do cliente em <code className="text-amber-300">public/profile.jpg</code>
-                      </span>
+                {/* Circular Profile Avatar with Golden Gradient Ring */}
+                <div className="relative my-4">
+                  <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full p-1 bg-gradient-to-tr from-amber-500 via-amber-300 to-amber-600 shadow-2xl shadow-amber-500/20 relative group">
+                    <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-navy-950 flex items-center justify-center">
+                      {!hasError ? (
+                        <img 
+                          src={imgSrc} 
+                          alt="San Alves - Responsável Técnico QSMS"
+                          onError={handleImageError}
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-slate-900 text-slate-400">
+                          <Camera className="w-10 h-10 text-amber-400/60 mb-1" />
+                          <span className="text-xs font-semibold text-slate-200">Foto de Perfil</span>
+                        </div>
+                      )}
                     </div>
-                  )}
-
-                  {/* Dark Gradient Overlay for text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
-                  
-                  {/* Name Tag overlaid on bottom of image */}
-                  <div className="absolute bottom-4 left-4 right-4 text-left">
-                    <span className="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-0.5">
-                      Responsável Técnico & Diretor QSMS
-                    </span>
-                    <h3 className="text-xl font-extrabold text-white">
-                      San Alves
-                    </h3>
                   </div>
+
+                  {/* Active Status Badge */}
+                  <div className="absolute bottom-2 right-2 bg-navy-950 p-1.5 rounded-full border border-amber-500/40 shadow-lg" title="Consultor Ativo">
+                    <div className="w-3.5 h-3.5 rounded-full bg-emerald-400 animate-pulse"></div>
+                  </div>
+                </div>
+
+                {/* Profile Identity Details */}
+                <div className="space-y-1 mb-5">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 block">
+                    Responsável Técnico & Diretor QSMS
+                  </span>
+                  <h3 className="text-2xl font-extrabold text-white">
+                    San Alves
+                  </h3>
+                  <p className="text-xs text-slate-400">
+                    Engenheiro Responsável & Consultor Especialista
+                  </p>
                 </div>
 
                 {/* LinkedIn Badge / Direct Link Button */}
@@ -147,25 +155,25 @@ export default function ProfileSection() {
                   href="https://www.linkedin.com/in/ssandroalvess/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 p-3 bg-slate-900/90 hover:bg-[#0077b5]/20 rounded-xl border border-slate-800 hover:border-[#0077b5]/50 text-center flex items-center justify-center gap-2 text-xs font-semibold text-slate-200 hover:text-sky-300 transition-all group"
+                  className="w-full p-3 bg-slate-900/90 hover:bg-[#0077b5]/20 rounded-xl border border-slate-800 hover:border-[#0077b5]/50 text-center flex items-center justify-center gap-2 text-xs font-semibold text-slate-200 hover:text-sky-300 transition-all group shadow-md mb-4"
                 >
                   <LinkedInIcon className="w-4 h-4 text-[#0077b5] shrink-0 group-hover:scale-110 transition-transform" />
                   <span>Perfil Oficial no LinkedIn</span>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-sky-400 group-hover:translate-x-0.5 transition-all" />
                 </a>
 
-              </div>
+                {/* Quick Metric Stats Grid */}
+                <div className="grid grid-cols-2 gap-3 w-full pt-4 border-t border-slate-800/80">
+                  <div className="bg-slate-900/80 p-3 rounded-2xl border border-slate-800 text-center">
+                    <div className="text-xl font-extrabold text-amber-400">17+</div>
+                    <div className="text-[10px] font-semibold text-slate-300 uppercase tracking-wide">Anos de Atuação</div>
+                  </div>
+                  <div className="bg-slate-900/80 p-3 rounded-2xl border border-slate-800 text-center">
+                    <div className="text-xl font-extrabold text-amber-400">100%</div>
+                    <div className="text-[10px] font-semibold text-slate-300 uppercase tracking-wide">Conformidade Legal</div>
+                  </div>
+                </div>
 
-              {/* Highlight Cards under Photo */}
-              <div className="grid grid-cols-2 gap-3 mt-4">
-                <div className="glass-navy p-4 rounded-2xl border border-slate-800 text-center">
-                  <div className="text-2xl font-extrabold text-amber-400">17+</div>
-                  <div className="text-[11px] font-semibold text-slate-300 uppercase tracking-wide">Anos de Atuação</div>
-                </div>
-                <div className="glass-navy p-4 rounded-2xl border border-slate-800 text-center">
-                  <div className="text-2xl font-extrabold text-amber-400">100%</div>
-                  <div className="text-[11px] font-semibold text-slate-300 uppercase tracking-wide">Conformidade Legal</div>
-                </div>
               </div>
 
             </FadeUp>
@@ -197,21 +205,6 @@ export default function ProfileSection() {
                 <p className="text-base text-slate-300 leading-relaxed">
                   Tenho sólida atuação com normas internacionais (<strong className="text-amber-300 font-semibold">ISO 9001, ISO 14001, ISO 45001, ISO 19011 e ISO 31000</strong>) e metodologias avançadas de análise de riscos (<strong className="text-amber-300 font-semibold">HAZOP, HAZID, What-If, LOPA, BowTie, APR e FMEA</strong>).
                 </p>
-
-                {/* Paragraph 4 - Power BI & Governance */}
-                <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
-                    <BarChart3 className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-amber-300 uppercase tracking-wide">
-                      Dashboards & Inteligência de Dados em Power BI
-                    </h4>
-                    <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                      Desenvolvo dashboards e análises de indicadores estratégicos em Power BI para suporte direto à tomada de decisão executiva, gestão de desempenho e prevenção contínua de passivos.
-                    </p>
-                  </div>
-                </div>
 
                 {/* Synthesis Conclusion */}
                 <div className="pt-2 border-t border-slate-800/80">

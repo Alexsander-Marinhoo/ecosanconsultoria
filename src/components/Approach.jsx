@@ -33,12 +33,12 @@ export default function Approach() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-6">
             
             {/* Card 1: Light Executive */}
-            <div className="relative bg-white text-slate-900 p-8 pb-14 rounded-3xl border border-slate-200/90 shadow-xl hover:shadow-2xl hover:border-amber-500/40 transition-all flex flex-col justify-between group h-full">
+            <div className="relative bg-white text-slate-900 p-8 pb-14 rounded-3xl border border-slate-200/90 shadow-lg flex flex-col justify-between h-full">
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-slate-100 border border-slate-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                <div className="w-14 h-14 rounded-2xl bg-slate-100 border border-slate-200 flex items-center justify-center mb-6 shadow-inner">
                   <SearchCheck className="w-7 h-7 text-slate-800" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-500 transition-colors">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
                   1. Mapeamento & Documentação Legal
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
@@ -46,27 +46,27 @@ export default function Approach() {
                 </p>
               </div>
 
-              {/* Pill Cutout Button at Bottom-Left */}
+              {/* Button at Bottom-Left */}
               <div className="absolute -bottom-4 left-6 z-10">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy-950 text-white font-extrabold text-xs shadow-xl border border-amber-500/30 hover:bg-amber-500 hover:text-navy-950 transition-all transform group-hover:translate-x-1"
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy-950 text-white font-extrabold text-xs shadow-xl border border-amber-500/30 hover:bg-amber-500 hover:text-navy-950 transition-all"
                 >
                   <span>Saiba Mais</span>
-                  <ChevronsRight className="w-4 h-4 text-amber-400 group-hover:text-navy-950" />
+                  <ChevronsRight className="w-4 h-4 text-amber-400 group-hover:text-navy-950 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>
             </div>
 
             {/* Card 2: Featured Gold Accent */}
-            <div className="relative bg-gold-gradient text-navy-950 p-8 pb-14 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex flex-col justify-between group h-full">
+            <div className="relative bg-gold-gradient text-navy-950 p-8 pb-14 rounded-3xl shadow-lg flex flex-col justify-between h-full">
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-navy-950/10 border border-navy-950/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-2xl bg-navy-950/10 border border-navy-950/20 flex items-center justify-center mb-6">
                   <SlidersHorizontal className="w-7 h-7 text-navy-950" />
                 </div>
-                <span className="inline-block px-3 py-1 rounded-full bg-navy-950 text-amber-300 font-extrabold text-[10px] uppercase mb-3">
+                <span className="text-[11px] font-extrabold text-navy-950/80 uppercase tracking-wider block mb-2">
                   Destaque Estratégico
                 </span>
                 <h3 className="text-xl font-extrabold text-navy-950 mb-3">
@@ -77,27 +77,27 @@ export default function Approach() {
                 </p>
               </div>
 
-              {/* Pill Cutout Button at Bottom-Left */}
+              {/* Button at Bottom-Left */}
               <div className="absolute -bottom-4 left-6 z-10">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy-950 text-amber-300 font-extrabold text-xs shadow-xl border border-navy-950/40 hover:bg-navy-900 transition-all transform group-hover:translate-x-1"
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy-950 text-amber-300 font-extrabold text-xs shadow-xl border border-navy-950/40 hover:bg-navy-900 transition-all"
                 >
                   <span>Saiba Mais</span>
-                  <ChevronsRight className="w-4 h-4 text-amber-400" />
+                  <ChevronsRight className="w-4 h-4 text-amber-400 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>
             </div>
 
             {/* Card 3: Dark Navy Contrast */}
-            <div className="relative bg-navy-900 text-white p-8 pb-14 rounded-3xl border border-amber-500/30 shadow-xl hover:shadow-2xl hover:border-amber-500/60 transition-all flex flex-col justify-between group h-full">
+            <div className="relative bg-navy-900 text-white p-8 pb-14 rounded-3xl border border-amber-500/30 shadow-lg flex flex-col justify-between h-full">
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-6">
                   <Scale className="w-7 h-7 text-amber-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3">
                   3. Gestão Tributária SST & FAP/RAT
                 </h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
@@ -105,16 +105,16 @@ export default function Approach() {
                 </p>
               </div>
 
-              {/* Pill Cutout Button at Bottom-Left */}
+              {/* Button at Bottom-Left */}
               <div className="absolute -bottom-4 left-6 z-10">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold-gradient text-navy-950 font-extrabold text-xs shadow-xl hover:brightness-110 transition-all transform group-hover:translate-x-1"
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold-gradient text-navy-950 font-extrabold text-xs shadow-xl hover:brightness-110 transition-all"
                 >
                   <span>Saiba Mais</span>
-                  <ChevronsRight className="w-4 h-4 text-navy-950" />
+                  <ChevronsRight className="w-4 h-4 text-navy-950 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>
             </div>

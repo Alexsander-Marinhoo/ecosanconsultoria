@@ -1,10 +1,7 @@
 import React from 'react';
 import { 
   Users, 
-  HardHat, 
-  Leaf, 
   ShieldCheck, 
-  CheckCircle2, 
   Factory, 
   ClipboardCheck, 
   Clock, 
@@ -15,14 +12,15 @@ import {
   UserCheck,
   Zap,
   FileCheck2,
-  Briefcase
+  Briefcase,
+  HardHat
 } from 'lucide-react';
 import FadeUp from './FadeUp';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function SesmtSection() {
   const whatsappUrl = "https://wa.me/5521964199750?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20para%20Terceiriza%C3%A7%C3%A3o%20de%20SESMT%20e%20M%C3%A3o%20de%20Obra%20Especializada.";
 
-  // 7 motivos / pilares principais fornecidos pelo cliente
   const whyHireList = [
     {
       icon: UserCheck,
@@ -66,22 +64,18 @@ export default function SesmtSection() {
     },
   ];
 
-  // Perfis disponíveis para alocação
   const availableRoles = [
     {
       title: 'Técnicos de Segurança do Trabalho (TST)',
       desc: 'Atuação direta no campo, emissão de permissões, inspeção de EPIs/EPCs e auditorias de conformidade com as NRs.',
-      tag: 'Segurança Ocupacional'
     },
     {
       title: 'Técnicos de Meio Ambiente (TMA)',
       desc: 'Controle de resíduos (PGRS), monitoramento de efluentes, condicionantes de licenças e atendimento a órgãos ambientais.',
-      tag: 'Gestão Ambiental'
     },
     {
       title: 'Especialistas em SST & QSMS',
       desc: 'Supervisão técnica, elaboração de inventários de riscos, coordenação de brigadas e suporte estratégico à liderança.',
-      tag: 'Gestão Integrada'
     }
   ];
 
@@ -94,19 +88,22 @@ export default function SesmtSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <FadeUp delay={0} yOffset={16} className="text-center max-w-4xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Alocação de Mão de Obra & Terceirização</span>
+        <FadeUp delay={0} yOffset={16}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
+            <div className="lg:col-span-7">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-3 block">
+                ✳ Alocação & Terceirização
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Terceirização de SESMT e <span className="text-gold-gradient">Mão de Obra Especializada</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-5">
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                Profissionais qualificados para fortalecer a Segurança, Saúde e Meio Ambiente (SSMA) da sua empresa com agilidade e respaldo técnico.
+              </p>
+            </div>
           </div>
-
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Terceirização de SESMT e <span className="text-gold-gradient">Mão de Obra Especializada</span>
-          </h2>
-
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-medium">
-            Profissionais especializados para fortalecer a Segurança, Saúde e Meio Ambiente (SSMA) da sua empresa.
-          </p>
         </FadeUp>
 
         {/* Narrative & Modality Overview Grid */}
@@ -177,25 +174,20 @@ export default function SesmtSection() {
 
               {availableRoles.map((role, idx) => (
                 <div 
-                  key={idx}
-                  className="glass-navy p-5 rounded-2xl border border-amber-500/20 hover:border-amber-500/50 transition-all flex-1 flex flex-col justify-between group"
+                  key={idx} 
+                  className="glass-navy p-5 rounded-2xl border border-amber-500/20 shadow-md flex-1 flex flex-col justify-center"
                 >
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-bold text-[10px] uppercase">
-                        {role.tag}
-                      </span>
-                      <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
-                        <Briefcase className="w-4 h-4" />
-                      </div>
-                    </div>
-                    <h4 className="text-base font-bold text-white mb-1.5 group-hover:text-amber-300 transition-colors">
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <h4 className="text-sm sm:text-base font-extrabold text-white">
                       {role.title}
                     </h4>
-                    <p className="text-xs text-slate-300 leading-relaxed">
-                      {role.desc}
-                    </p>
+                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                      <Briefcase className="w-4 h-4" />
+                    </div>
                   </div>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    {role.desc}
+                  </p>
                 </div>
               ))}
 
@@ -213,16 +205,20 @@ export default function SesmtSection() {
 
         {/* Section Sub-Title: "Por que contratar nossa equipe?" */}
         <FadeUp delay={0.15} yOffset={16}>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-2 block">
-              ✳ Benefícios Exclusivos
-            </span>
-            <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Por que Contratar a <span className="text-gold-gradient">Nossa Equipe de SESMT</span>?
-            </h3>
-            <p className="text-sm text-slate-400 mt-2">
-              Estrutura completa, rápida mobilização e segurança técnica para elevar o padrão preventivo da sua empresa.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+            <div className="lg:col-span-7">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-2 block">
+                ✳ Benefícios Exclusivos
+              </span>
+              <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+                Por que Contratar a <span className="text-gold-gradient">Nossa Equipe de SESMT</span>?
+              </h3>
+            </div>
+            <div className="lg:col-span-5">
+              <p className="text-sm text-slate-400 leading-relaxed font-normal">
+                Estrutura completa, rápida mobilização e segurança técnica para elevar o padrão preventivo da sua empresa.
+              </p>
+            </div>
           </div>
         </FadeUp>
 
@@ -234,25 +230,20 @@ export default function SesmtSection() {
               return (
                 <div
                   key={index}
-                  className="glass-navy p-6 rounded-3xl border border-amber-500/20 hover:border-amber-500/50 glass-card-hover group flex flex-col justify-between h-full"
+                  className="glass-navy p-6 rounded-3xl border border-slate-800 shadow-md flex flex-col justify-between h-full"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-5 text-amber-400 group-hover:scale-110 group-hover:bg-amber-500/20 transition-all shadow-inner">
+                    <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-5 text-amber-400 shadow-inner">
                       <IconComponent className="w-6 h-6" />
                     </div>
 
-                    <h4 className="text-base font-bold text-white mb-2.5 group-hover:text-amber-400 transition-colors leading-snug">
+                    <h4 className="text-base font-bold text-white mb-2.5 leading-snug">
                       {item.title}
                     </h4>
 
                     <p className="text-xs text-slate-300 leading-relaxed">
                       {item.description}
                     </p>
-                  </div>
-
-                  <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center gap-1.5 text-[11px] text-amber-400/90 font-semibold">
-                    <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                    <span>Diferencial Ecosan</span>
                   </div>
                 </div>
               );
@@ -268,9 +259,8 @@ export default function SesmtSection() {
             <div className="absolute -top-24 -left-24 w-72 h-72 bg-amber-500/20 rounded-full blur-[100px] pointer-events-none"></div>
 
             <div className="relative z-10 max-w-2xl space-y-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-extrabold text-[11px] uppercase tracking-wider">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                Segurança Jurídica & Operacional
+              <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400 block">
+                ✳ Segurança Jurídica & Operacional
               </span>
 
               <h4 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
@@ -293,11 +283,11 @@ export default function SesmtSection() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gold-gradient text-navy-950 font-black text-xs uppercase tracking-wider shadow-2xl hover:brightness-110 hover:shadow-amber-500/40 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-3 group cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-navy-950 text-white font-black text-xs uppercase tracking-wider shadow-2xl border border-amber-500/30 hover:bg-emerald-600 hover:border-emerald-500 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-3 group cursor-pointer"
               >
-                <MessageSquare className="w-4 h-4 fill-navy-950" />
+                <WhatsAppIcon className="w-4 h-4 text-white fill-white shrink-0" />
                 <span>Solicitar Equipe / Terceirização</span>
-                <ChevronsRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ChevronsRight className="w-4 h-4 text-amber-400 group-hover:text-white group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
