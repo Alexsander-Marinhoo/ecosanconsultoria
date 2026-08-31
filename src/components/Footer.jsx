@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contato" className="bg-navy-950 text-slate-400 text-xs border-t border-amber-500/20 pt-16 pb-12 relative z-10">
+    <footer id="rodape" className="bg-navy-950 text-slate-400 text-xs border-t border-amber-500/20 pt-16 pb-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
