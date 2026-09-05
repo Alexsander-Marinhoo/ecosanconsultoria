@@ -15,7 +15,7 @@ export default function Hero() {
           decoding="async"
           fetchPriority="high"
           className="w-full h-full object-cover"
-          alt="Ecosan Engenharia Hero Background"
+          alt="Ecosan Consultoria e Assessoria em HSEQ/QSMS Hero Background"
         />
       </picture>
       
@@ -56,7 +56,7 @@ export default function Hero() {
                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                 </div>
                 <span className="text-[10px] sm:text-xs font-semibold text-slate-200 border-l border-slate-700 pl-2">
-                  Consultoria de Autoridade em <strong className="text-amber-400">QSMS & Engenharia</strong>
+                  Consultoria de Autoridade em <strong className="text-amber-400">HSEQ & QSMS</strong>
                 </span>
               </div>
 

@@ -51,7 +51,7 @@ export default function Differentials() {
                 ✳ Nossos Diferenciais
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                Por que escolher a <span className="text-gold-gradient">Ecosan Engenharia</span>?
+                Por que escolher a <span className="text-gold-gradient">Ecosan Consultoria &amp; Assessoria</span>?
               </h2>
             </div>
             <div className="lg:col-span-5">

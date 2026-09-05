@@ -127,7 +127,7 @@ export default function Footer() {
 
         {/* Bottom Legal & Developer Credits Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
-          <p>© {new Date().getFullYear()} Ecosan Engenharia & Consultoria. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Ecosan Consultoria e Assessoria em HSEQ/QSMS. Todos os direitos reservados.</p>
           
           {/* Developer Credit Link to Instagram */}
           <p className="flex items-center gap-1.5">

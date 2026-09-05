@@ -1,5 +1,5 @@
 # ==============================================================================
-# Robots.txt - Ecosan Engenharia & Consultoria
+# Robots.txt - Ecosan Consultoria e Assessoria em HSEQ/QSMS
 # Website: https://ecosanconsultoria.vercel.app/
 # ==============================================================================
 

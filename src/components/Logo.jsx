@@ -12,7 +12,7 @@ export default function Logo({ size = 'md', variant = 'light' }) {
     <div className="flex items-center gap-3 group">
       <img
         src="/logo.svg"
-        alt="ECOSAN Engenharia & Consultoria Logo"
+        alt="ECOSAN Consultoria e Assessoria em HSEQ/QSMS Logo"
         decoding="async"
         fetchPriority="high"
         className={`${sizeClasses[size] || 'h-16'} w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-lg`}
