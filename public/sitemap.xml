@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ecosanconsultoria.vercel.app/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://ecosanconsultoria.vercel.app/og-cover.png</image:loc>
-      <image:title>Ecosan Consultoria e Assessoria em HSEQ/QSMS | Gestão Integrada de QSMS</image:title>
-      <image:caption>Assessoria técnica em Segurança do Trabalho, PGR, PCMSO, LTCAT, Terceirização de SESMT e Licenciamento Ambiental em Volta Redonda - RJ</image:caption>
-    </image:image>
   </url>
 </urlset>
